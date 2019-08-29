@@ -1,0 +1,47 @@
+$highlightColor: rgb(116, 171, 7);
+
+.song-cont{
+    color:white;
+    max-width:600px;
+    margin:auto;
+    border: 1px solid rgb(255, 255, 255);
+    padding:10px;
+    border-radius: 5px;
+    font-family: Sans-serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+    margin-top: 100px;
+    
+    & .song-entry.header{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+
+    & .song-entry{
+        display: grid;
+        grid-template-columns: 30px 300px auto;
+        align-items: center;
+        padding:5px;
+        border-radius: 2px;
+
+        &:hover{
+            background: $highlightColor;
+            & .play-button{
+                opacity: 1;
+            }
+        }
+        &.is-playing{
+            background: $highlightColor;
+            & .play-button{
+                opacity: 1;
+            }
+        }
+    }
+
+    & .play-button{
+        opacity: 0;
+        cursor: pointer;
+        padding: 2px;
+    }
+}
