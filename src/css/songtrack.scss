@@ -1,0 +1,55 @@
+.pause-play-control{
+	margin-right: 10px;
+	color: grey;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all .25s;
+	font-size: 20px;
+	&:hover{
+		color: black;
+	}
+}
+
+.track-slider-container {
+	width: 100%;
+	padding: 5px;
+	padding-left:0;
+	& svg{
+		font-size: 20px;
+		margin-right: 5px;
+		width: 22px !important;
+		color: grey;
+		position: relative;
+	}
+	& .mute-button{
+		transition: all .25s;	
+		cursor: pointer;
+		width: 22px !important;
+		&:hover{
+			color:black;
+		}
+	}		
+	& .track-slider {
+		position: relative;
+		top:-3px;
+		-webkit-appearance: none;
+		border-radius: 5px;
+		appearance: none;
+		width: 92%;
+		height: 10px; 
+		background: #d3d3d3;
+		outline: none;
+	}	
+	
+	& .track-slider::-webkit-slider-thumb {
+		appearance: none;
+		width: 3px; 
+		border-radius: 5px;
+		height: 20px;
+		background: black;
+		cursor: pointer;
+	}
+}
+
+
+

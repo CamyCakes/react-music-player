@@ -1,0 +1,44 @@
+.slidecontainer {
+	width: 150px;
+	padding: 5px;
+    padding-left: 0;
+	& svg{
+		font-size: 20px;
+		margin-right: 5px;
+		width: 22px !important;
+		color: grey;
+	}
+	& .mute-button{
+		transition: all .25s;	
+		cursor: pointer;
+		&:hover{
+			color:black;
+		}
+	}		
+	.volume-slider {
+		-webkit-appearance: none;
+		border-radius: 5px;
+		appearance: none;
+		width: 75%;
+		height: 10px; 
+		background: #d3d3d3;
+		outline: none;
+		opacity: 0;
+		transition: opacity .2s;
+	}
+	&:hover .volume-slider{
+		opacity: 1;
+	}
+
+	& .volume-slider::-webkit-slider-thumb {
+		appearance: none;
+		width: 3px; 
+		border-radius: 5px;
+		height: 20px;
+		background: black;
+		cursor: pointer;
+	}
+}
+
+
+
