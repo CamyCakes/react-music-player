@@ -1,0 +1,29 @@
+
+@media( max-width: 800px ){
+	.current-song .song-info {
+		width: 100%;
+		text-align: center;
+		margin-left:0;
+		line-height: 35px;
+	}
+	.current-song .song-cover{
+		margin:auto;
+	}
+	.current-song .song-info-cont{
+		margin:auto;
+	}
+	.current-song .song-controls{
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.slidecontainer{
+		justify-content: center;
+		margin: 10px !important;
+	}
+	.current-song .song-controls > *{
+		margin: 12px !important;
+	}
+	.song-cont .song-entry .song-data {
+		padding: 10px;
+	}
+}

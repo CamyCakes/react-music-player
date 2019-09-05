@@ -31,7 +31,7 @@ class VolumeSLider extends React.Component{
 		let icon = null;
 		if( this.state.volume > .49 ) icon = faVolumeUp;	
 		else if( this.state.volume > 0 ) icon = faVolumeDown;
-		else if( this.state.volume == 0 ) icon = faVolumeMute;	
+		else if( this.state.volume === 0 ) icon = faVolumeMute;	
 
 		return(
 			<div className="slidecontainer">

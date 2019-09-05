@@ -3,6 +3,9 @@ import '../css/currentSong.scss'
 import VolumeSlider from './VolumeSlider'
 import SongTrack from './SongTrack'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay, faPause, faStepBackward, faStepForward } from '@fortawesome/free-solid-svg-icons'
+
 class CurrentSong extends React.Component{
 
 	constructor(props){
@@ -32,7 +35,32 @@ class CurrentSong extends React.Component{
 						<SongTitle song={ song } />
 
 						<div className='song-controls-cont'>
-							
+							<div className='song-controls'>
+
+								<FontAwesomeIcon
+									className='pause-play-control'
+									icon={ faStepBackward }
+									onClick={ ()=> { this.props.onNext( -1 ) }} 
+								/>
+
+								<FontAwesomeIcon
+									className='pause-play-control'
+									icon={ this.props.isPlaying ? faPause : faPlay }
+									onClick={ ()=> { this.props.pausePlay() }} 
+								/>
+
+								<FontAwesomeIcon
+									className='pause-play-control'
+									icon={ faStepForward }
+									onClick={ ()=> { this.props.onNext( 1 ) }} 
+								/>
+								
+								<VolumeSlider 
+									onChange={ ( vol )=>{ this.props.onChangeVolume( vol ) }}
+								/>
+
+							</div>
+								
 							<SongTrack 
 								songDuration={ this.props.audioPlayer.duration }
 								trackTime={ this.state.currentTrackTime }
@@ -40,10 +68,6 @@ class CurrentSong extends React.Component{
 								song={ this.props.songDuration}
 								isPlaying={ this.props.isPlaying }
 								pausePlay={()=>{ this.props.pausePlay() }}
-							/>
-							
-							<VolumeSlider 
-								onChange={ ( vol )=>{ this.props.onChangeVolume( vol ) }}
 							/>
 						</div>
 					</div>
@@ -67,7 +91,5 @@ function SongTitle( props ){
 	}
 }
 
-function str_pad_left( string, pad, length) {
-    return (new Array(length+1).join(pad)+string).slice(-length);
-}
+
 export default CurrentSong

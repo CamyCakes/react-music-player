@@ -1,5 +1,17 @@
 $grey: #0000007d;
 
+.pause-play-control{
+	margin-right: 10px;
+	color: grey;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all .25s;
+	font-size: 20px;
+	&:hover{
+		color: black;
+	}
+}
+
 .current-song{
 	display: flex;
 	justify-content: space-between;
@@ -7,15 +19,18 @@ $grey: #0000007d;
 	& .song-info{
 		width: 100%;
 		text-align: left;
-		margin-left: 60px;
+		margin-left: 25px;
 		margin-right: 0;
 		letter-spacing: 0px;
-		line-height: 14px;
+		line-height: 22px;
+		font-size: 1.3em;
+		font-weight: 800;
 	}
 	& .song-info-cont{
 		display: flex;
 		max-width: 550px;
-		align-items: center;
+		align-items: flex-end;
+		margin-bottom: 3px;
 		width: 100%;
 		opacity: 0;
 		pointer-events: none;
@@ -35,6 +50,15 @@ $grey: #0000007d;
 			border-radius: 5px;
 			width:100%;
 			height: 100%;
+		}
+	}
+	& .song-controls{
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		& > *{
+			margin: 10px 20px 25px 0px;
+			font-size: 32px;
 		}
 	}
 }

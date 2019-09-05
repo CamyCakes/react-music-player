@@ -17,6 +17,8 @@ $highlightColor: rgb(228, 228, 228);
 		grid-template-columns: 30px 33% 30% auto;
 		align-items: center;
 		padding:3px;
+		border-radius: 3px;
+		cursor: pointer;
 
         &:not(.header):hover{
             background: $highlightColor;

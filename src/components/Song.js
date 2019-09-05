@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPause, faVolumeUp } from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
 
 class Song extends React.Component{
     render(){
@@ -11,11 +11,11 @@ class Song extends React.Component{
 		let isPlaying = ( this.props.isPlaying && isCurrentSong ) ? true : false;
 
 		return(
-            <div className={ 'song-entry ' + ( isCurrentSong ? 'song-playing' : '') }>
+			<div className={ 'song-entry ' + ( isCurrentSong ? 'song-playing' : '') }
+				onClick={ ()=>{ this.props.onClick( key ) }} >
 				<FontAwesomeIcon
 					icon={ isPlaying ? faPause : faPlay } 
-					className='play-button' 
-					onClick={ ()=>{ this.props.onClick( key ) }} />
+					className='play-button'  />
                 <span className='song-data name'>{ name }</span>
                 <span className='song-data artist'>{ artist }</span>
                 <span className='song-data album'>{ album.name }</span>

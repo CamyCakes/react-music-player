@@ -6,7 +6,7 @@ import CurrentSong from './components/CurrentSong'
 import { SongData, PlaceHolder } from './SongData';
 
 import './css/App.scss';
-
+import './css/mediaqueries.scss'
 class App extends React.Component {
 
 	constructor( props ){
@@ -17,7 +17,7 @@ class App extends React.Component {
 		this.audio.volume = 0.5;
 
 		this.audio.onended = () =>{
-			this.advanceSong()
+			this.advanceSong( 1 )
 		}
 		
         this.state={
@@ -45,15 +45,19 @@ class App extends React.Component {
 		}
 
 		this.setState({ 
-			currentPlaying: this.state.songs [ key ],
+			currentPlaying: this.state.songs[ key ],
 			isPlaying: isPlaying
 		});
 	}
 
-	advanceSong(){
-		let nextSong = this.state.currentPlaying.key + 1;
-		if( this.state.songs.length < nextSong )
+	advanceSong( direction ){
+		let nextSong = this.state.currentPlaying.key + direction;
+
+		if( this.state.songs.length - 1 < nextSong )
 			nextSong = 0;
+		if( nextSong < 0)
+			nextSong = this.state.songs.length - 1
+
 		this.audio.src = this.state.songs[ nextSong ].audioFile
 		this.audio.play();
 		this.setState({ 
