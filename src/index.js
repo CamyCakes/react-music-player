@@ -83,6 +83,7 @@ class App extends React.Component {
 					isPlaying={ this.state.isPlaying }
 					pausePlay={ ( key )=>{ this.pausePlay( key ) }} 
 					songs={ this.state.songs } 
+					onSort={ ( updatedList )=>{ this.setState({ songs:updatedList }) }  }
 				/>
 			</div>
 		);

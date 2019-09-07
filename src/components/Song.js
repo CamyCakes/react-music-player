@@ -12,7 +12,8 @@ class Song extends React.Component{
 
 		return(
 			<div className={ 'song-entry ' + ( isCurrentSong ? 'song-playing' : '') }
-				onClick={ ()=>{ this.props.onClick( key ) }} >
+				onClick={ ()=>{ this.props.onClick( key ) }} 
+				 >
 				<FontAwesomeIcon
 					icon={ isPlaying ? faPause : faPlay } 
 					className='play-button'  />
