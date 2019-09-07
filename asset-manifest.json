@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-music-player/static/css/main.84b24a7d.chunk.css",
+    "main.js": "/react-music-player/static/js/main.8868ab1f.chunk.js",
+    "main.js.map": "/react-music-player/static/js/main.8868ab1f.chunk.js.map",
+    "runtime~main.js": "/react-music-player/static/js/runtime~main.e4672bac.js",
+    "runtime~main.js.map": "/react-music-player/static/js/runtime~main.e4672bac.js.map",
+    "static/js/2.72cc0f20.chunk.js": "/react-music-player/static/js/2.72cc0f20.chunk.js",
+    "static/js/2.72cc0f20.chunk.js.map": "/react-music-player/static/js/2.72cc0f20.chunk.js.map",
+    "index.html": "/react-music-player/index.html",
+    "precache-manifest.4f1c6866625148e3fa90cf485f83dc61.js": "/react-music-player/precache-manifest.4f1c6866625148e3fa90cf485f83dc61.js",
+    "service-worker.js": "/react-music-player/service-worker.js",
+    "static/css/main.84b24a7d.chunk.css.map": "/react-music-player/static/css/main.84b24a7d.chunk.css.map"
+  }
+}
